@@ -3,6 +3,7 @@ import {useState} from "react";
 function Child({abc, apple, nameList, petList}){
     
     const [fruit, setFruit] = useState(apple);
+    const [petList, setPetList] = useState([]);
 
     const handleFruitChange = (e) => {
         setFruit(e.target.value);

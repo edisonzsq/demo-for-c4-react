@@ -1,16 +1,20 @@
 import { Component } from "react";
 
 class SecondChild extends Component{
-    constructor(props){        
+    constructor({fruit}){        
        super();
        this.state = {
-           fruit: props.fruit
+           fruit: fruit,
+           petList:[],
+           nameList:[],
+           abc:{}
        }
        this.handleFruitChange = this.handleFruitChange.bind(this);
     }
 
     handleFruitChange(e){
         this.setState({
+            ...this.state,
             fruit:e.target.value
         })
     }
